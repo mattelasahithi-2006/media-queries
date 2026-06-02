@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.ball-container {
+  width: 300px;
+  height: 60px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  position: absolute;
+  animation: moveBall 2s linear infinite;
+}
+
+@keyframes moveBall {
+  0% { left: 0; }
+  50% { left: calc(100% - 50px); }
+  100% { left: 0; }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+    <div class="ball-container">
+  <div class="ball"></div>
+</div>
+
+
+</body>
+</html>
